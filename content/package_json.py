@@ -1,7 +1,6 @@
 PACKAGE_JSON_CONTENT = """
 {
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --config ./webpack/webpack.dev.js",
     "build": "webpack --mode production --config ./webpack/webpack.prod.js"
   },

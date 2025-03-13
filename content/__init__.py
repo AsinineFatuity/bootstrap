@@ -1,0 +1,1 @@
+from .package_json import PACKAGE_JSON_CONTENT
