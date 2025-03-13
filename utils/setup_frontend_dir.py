@@ -1,7 +1,5 @@
 import os 
-import subprocess 
 from constants import names 
-import content
 
 class SetUpFrontendDir:
     PROJECT_ROOT = os.getcwd()
