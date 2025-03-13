@@ -1,8 +1,8 @@
-# hybrid django-react bootstrap
+# Hybrid Django-React Bootstrap
 Scripts to bootstrap my hybrid django-react projects set up inspired by 
 * The hybrid Python/Django/React Architecture as described by Cory Zue in [this article](https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/integrating-javascript-pipeline/)
 * Session based Auth for SPA/Django as described by Nik Tomazic in [this article](https://testdriven.io/blog/django-spa-auth/)
-# Run The Script
+## Run The Script
 1. Install and set up django project as usual 
 2. Ensure you have installed node and npm
 3. Run the script `python3 set_up_frontend.py`
