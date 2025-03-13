@@ -40,6 +40,28 @@ class SetUpFrontend:
         print("📦 Installing dependencies ...")
         subprocess.run(["npm", "install"])
         print("✅ Dependencies installed successfully")
+    
+    def _setup_templates_folder(self):
+        print("📦 Setting up templates folder ...")
+        os.makedirs(names.TEMPLATES_DIR, exist_ok=True)
+        os.chdir(names.TEMPLATES_DIR)
+        with open(names.INDEX_HTML_FILE, "w") as index_html_file:
+            index_html_file.write(content.INDEX_HTML_CONTENT)
+        print("✅ index.html file created successfully")
+        with open(names.HOME_HTML_FILE, "w") as home_html_file:
+            home_html_file.write(content.HOME_HTML_CONTENT)
+        print("✅ home.html file created successfully")
+        print("✅ Templates folder created successfully")
+        os.chdir(self.PROJECT_ROOT)
+        self._set_up_static_folder()
+    
+    def _set_up_static_folder(self):
+        print("📦 Setting up static folder ...")
+        os.makedirs(names.STATIC_DIR, exist_ok=True)
+        os.chdir(names.STATIC_DIR)
+        with open(names.INDEX_BUNDLE_JS_FILE, "w") as index_bundle_js_file:
+            index_bundle_js_file.write("")
+        print("✅ Static folder created successfully")
 
 frontend = SetUpFrontend()
-frontend._setup_webpack_config_files()
+frontend._setup_templates_folder()

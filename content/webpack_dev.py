@@ -34,7 +34,7 @@ module.exports = {
       "process.env": JSON.stringify(dotenv.parsed),
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "../templates/api/home.html"),
+      template: path.resolve(__dirname, "../templates/home.html"),
       inject: true,
     }),
     new LiveReloadPlugin(),

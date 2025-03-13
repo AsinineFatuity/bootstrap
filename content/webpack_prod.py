@@ -43,7 +43,7 @@ module.exports = {
       "process.env": JSON.stringify(dotenv.parsed),
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "../templates/api/index.html"),
+      template: path.resolve(__dirname, "../templates/index.html"),
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
