@@ -35,7 +35,7 @@ export const showLoadingIndicator = (showIndicator: boolean) => {
 };
 """
 
-ACTIONS_INDEX_TS_CONTENT = """"
+ACTIONS_INDEX_TS_CONTENT = """
 import { showLoadingIndicator } from "./loadingIndicator";
 import { showCustomFeedbackToast } from "./feedbackToast";
 

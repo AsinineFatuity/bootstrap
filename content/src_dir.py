@@ -2,7 +2,7 @@ APP_TSX_CONTENT = """
 import React from "react";
 import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
 import Home from "./src/pages/home";
-import { APP_URLS } from "./helpers/utils";
+import { APP_URLS } from "./helpers";
 
 function App() {
   return (
@@ -18,6 +18,13 @@ export default App;
 """
 
 INDEX_TSX_CONTENT = """
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import { ToastContainer } from "react-toastify";
+import "bootstrap/dist/css/bootstrap.min.css"; // don't change order
+import "react-toastify/dist/ReactToastify.css";
 import App from "./App";
 import { LoadingIndicator, FeedbackToast } from "./components";
 import reduxStore from "./redux/store";

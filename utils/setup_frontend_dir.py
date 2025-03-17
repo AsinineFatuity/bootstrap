@@ -13,6 +13,10 @@ class SetUpFrontendDir:
         print("📦 Creating frontend folder and initializing files ...")
         os.makedirs(self.FRONTEND_DIR, exist_ok=True)
         os.chdir(self.FRONTEND_DIR)
+        with open(names.INDEX_TSX_FILE, "w") as index_ts_file:
+            index_ts_file.write(content.INDEX_TSX_CONTENT)
+        with open(names.APP_TSX_FILE, "w") as app_tsx_file:
+            app_tsx_file.write(content.APP_TSX_CONTENT)
         self._setup_env_dir()
         self._setup_helpers_dir()
         self._setup_hooks_dir()
@@ -20,6 +24,7 @@ class SetUpFrontendDir:
         self._setup_components_dir()
         self._setup_src_dir()
         print("✅ Folder frontend set up successfully")
+        os.chdir(self.PROJECT_ROOT)
 
     def _setup_env_dir(self):
         print("📦 Setting up environments folder ...")
@@ -119,10 +124,6 @@ class SetUpFrontendDir:
         print("📦 Setting up src folder ...")
         os.makedirs(names.SRC_DIR, exist_ok=True)
         os.chdir(names.SRC_DIR)
-        with open(names.INDEX_TS_FILE, "w") as index_ts_file:
-            index_ts_file.write(content.INDEX_TSX_CONTENT)
-        with open(names.APP_TSX_FILE, "w") as app_tsx_file:
-            app_tsx_file.write(content.APP_TSX_CONTENT)
         os.makedirs(names.PAGES_DIR, exist_ok=True)
         os.chdir(names.PAGES_DIR)
         with open(names.HOME_TSX_FILE, "w") as home_tsx_file:

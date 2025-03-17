@@ -1,4 +1,4 @@
-REDUX_STORE_CONTENT = """"
+REDUX_STORE_CONTENT = """
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { thunk } from "redux-thunk";
 

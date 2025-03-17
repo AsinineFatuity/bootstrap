@@ -1,8 +1,7 @@
 FEEDBACK_TOAST_REDUCER_CONTENT = """
-
 import { FEEDBACK_TOAST } from "../actions/types";
 import { FeedBackToastType } from "../../helpers/interfaces";
-import _ from "lodash";
+
 const initialState: FeedBackToastType = {
   type: "default",
   message: "",
