@@ -2,6 +2,10 @@
 Scripts to bootstrap my hybrid django-react projects set up inspired by 
 * The hybrid Python/Django/React Architecture as described by Cory Zue in [this article](https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/integrating-javascript-pipeline/)
 * Session based Auth for SPA/Django as described by Nik Tomazic in [this article](https://testdriven.io/blog/django-spa-auth/)
+## Quick Overview
+1. React/Redux/Typescript (Javascript not supported)
+2. React Bootstrap for styling (Tailwind CSS coming soon)
+3. Quite opinionated but loosely coupled. The contents matter, structure doesn't
 ## Run The Script
 1. Install Django using your preferred package manager
 2. Start a new project by running `django-admin startproject project_name .` The `.` is necessary so that the script references your project easily
