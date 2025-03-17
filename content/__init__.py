@@ -17,3 +17,4 @@ from content.redux_actions import (
     LOADING_INDICATOR_ACTION_CONTENT,
     ACTIONS_INDEX_TS_CONTENT,
 )
+from content.redux_middleware import MIDDLEWARE_INDEX_CONTENT
