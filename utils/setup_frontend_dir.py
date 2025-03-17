@@ -112,6 +112,10 @@ class SetUpFrontendDir:
             index_ts_file.write(content.INDEX_TSX_CONTENT)
         with open(names.APP_TSX_FILE, "w") as app_tsx_file:
             app_tsx_file.write(content.APP_TSX_CONTENT)
+        os.makedirs(names.PAGES_DIR, exist_ok=True)
+        os.chdir(names.PAGES_DIR)
+        with open(names.HOME_TSX_FILE, "w") as home_tsx_file:
+            home_tsx_file.write(content.HOME_PAGE_CONTENT)
         print("✅ Folder src created successfully")
         os.chdir(self.FRONTEND_DIR)
 
