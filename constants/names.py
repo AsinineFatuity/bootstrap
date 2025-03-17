@@ -38,3 +38,8 @@ LOADING_INDICATOR_REDUX_FILE = "loadingIndicator.ts"
 FEEDBACK_TOAST_REDUX_FILE = "feedbackToast.ts"
 DEV_ENV_FILE = ".env.development"
 DEV_PROD_FILE = ".env.production"
+
+# Django Files
+DJANGO_URLS_FILE = "urls.py"
+DJANGO_ASGI_FILE = "asgi.py"
+DJANGO_WSGI_FILE = "wsgi.py"

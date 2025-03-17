@@ -26,3 +26,4 @@ from content.redux_reducer import (
 from content.redux_store import REDUX_STORE_CONTENT
 from content.hooks import HOOKS_INDEX_TS_CONTENT
 from content.ts_config import TS_CONFIG_JSON_CONTENT
+from content.urls import DJANGO_URLS_CONTENT
