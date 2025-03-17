@@ -2,10 +2,12 @@
 Scripts to bootstrap my hybrid django-react projects set up inspired by 
 * The hybrid Python/Django/React Architecture as described by Cory Zue in [this article](https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/integrating-javascript-pipeline/)
 * Session based Auth for SPA/Django as described by Nik Tomazic in [this article](https://testdriven.io/blog/django-spa-auth/)
+* The benefits of this set up is that you're able to use django features where you want and selectively use React. Also you don't have to worry about JWT as we're using normal django authentication.
 ## Quick Overview
 1. React/Redux/Typescript (Javascript not supported)
-2. React Bootstrap for styling (Tailwind CSS coming soon)
-3. Quite opinionated but loosely coupled. The contents matter, structure doesn't
+2. Webpack is used for the compiler
+3. React Bootstrap for styling (Tailwind CSS coming soon)
+4. Quite opinionated but loosely coupled. The contents matter, structure doesn't
 ## Run The Script
 1. Install Django using your preferred package manager
 2. Start a new project by running `django-admin startproject project_name .` The `.` is necessary so that the script references your project easily
@@ -45,4 +47,5 @@ frontend/environments/.env.production
 8. Run `npm start` and `./manage.py runserver` in separate terminal windows
 9.  Navigate to `http://127.0.0.1:8000` and you will see the react home page loaded
 10. Try changing contents in `frontend/src/pages/home.tsx` to see live reload in action
-11. Build on from there
+11. The django urls connects to the react home via the `app/*` regex wildcard
+12. Build on from there
