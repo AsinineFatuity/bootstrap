@@ -24,3 +24,4 @@ from content.redux_reducer import (
     REDUCER_INDEX_CONTENT,
 )
 from content.redux_store import REDUX_STORE_CONTENT
+from content.hooks import HOOKS_INDEX_TS_CONTENT
