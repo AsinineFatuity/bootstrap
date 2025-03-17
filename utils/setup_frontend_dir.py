@@ -1,17 +1,17 @@
-import os 
+import os
 import content
-from constants import names 
+from constants import names
+
 
 class SetUpFrontendDir:
 
-    def __init__(self, project_root:str):
-        self.PROJECT_ROOT = project_root 
+    def __init__(self, project_root: str):
+        self.PROJECT_ROOT = project_root
         self.FRONTEND_DIR = os.path.join(project_root, names.FRONTEND_DIR)
-
 
     def set_up_frontend_dir(self):
         self._setup_frontend_dir()
-    
+
     def _setup_components_dir(self):
         print("📦 Setting up components folder ...")
         os.makedirs(names.COMPONENTS_DIR, exist_ok=True)
@@ -23,8 +23,8 @@ class SetUpFrontendDir:
         with open(names.FEEDBACK_TOAST_TSX_FILE, "w") as feedback_toast_tsx_file:
             feedback_toast_tsx_file.write(content.FEEDBACK_TOAST_TSX_CONTENT)
         print("✅ Folder components created successfully")
-        os.chdir(self.PROJECT_ROOT)
-    
+        os.chdir(self.FRONTEND_DIR)
+
     def _setup_src_dir(self):
         print("📦 Setting up src folder ...")
         os.makedirs(names.SRC_DIR, exist_ok=True)

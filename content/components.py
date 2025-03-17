@@ -1,4 +1,3 @@
-
 FEEDBACK_TOAST_TSX_CONTENT = """
 import React, { useEffect } from "react";
 import { toast } from "react-toastify";

@@ -5,7 +5,7 @@ REDUX_DIR = "redux"
 ACTIONS_DIR = "actions"
 REDUCERS_DIR = "reducer"
 MIDDLEWARE_DIR = "middleware"
-COMPONENTS_DIR = "components" 
+COMPONENTS_DIR = "components"
 ENVIRONMENTS_DIR = "environments"
 HELPERS_DIR = "helpers"
 INTERFACES_DIR = "interfaces"
@@ -16,7 +16,7 @@ WEBPACK_DIR = "webpack"
 STATIC_DIR = "static"
 TEMPLATES_DIR = "templates"
 
-#File Names
+# File Names
 INDEX_TS_FILE = "index.ts"
 INDEX_TSX_FILE = "index.tsx"
 STORE_TS_FILE = "store.ts"
