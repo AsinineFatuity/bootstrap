@@ -1,5 +1,5 @@
 # Hybrid Django-React Bootstrap
-Scripts to bootstrap my hybrid django-react projects set up inspired by 
+Script to bootstrap hybrid django-react projects set up inspired by 
 * The hybrid Python/Django/React Architecture as described by Cory Zue in [this article](https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/integrating-javascript-pipeline/)
 * Session based Auth for SPA/Django as described by Nik Tomazic in [this article](https://testdriven.io/blog/django-spa-auth/)
 * The benefits of this set up is that you're able to use django features where you want and selectively use React. Also you don't have to worry about JWT as we're using normal django authentication.
