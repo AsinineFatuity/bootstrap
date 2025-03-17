@@ -40,7 +40,7 @@ class SetUpFrontendDir:
         os.chdir(names.INTERFACES_DIR)
         with open(names.INDEX_TS_FILE, "w") as index_ts_file:
             index_ts_file.write(content.INTERFACES_FILE_CONTENT)
-        os.chdir(names.HELPERS_DIR)
+        os.chdir("..")
         os.makedirs(names.UTILS_DIR, exist_ok=True)
         with open(names.INDEX_TS_FILE, "w") as utils_file:
             utils_file.write(content.UTILS_FILE_CONTENT)
@@ -65,12 +65,12 @@ class SetUpFrontendDir:
         with open(names.FEEDBACK_TOAST_REDUX_FILE, "w") as feedback_toast_action_file:
             feedback_toast_action_file.write(content.FEEDBACK_TOAST_ACTION_CONTENT)
         # middleware
-        os.chdir(names.REDUX_DIR)
+        os.chdir("..")
         os.makedirs(names.MIDDLEWARE_DIR, exist_ok=True)
         os.chdir(names.MIDDLEWARE_DIR)
         with open(names.INDEX_TS_FILE, "w") as index_ts_file:
             index_ts_file.write(content.MIDDLEWARE_INDEX_CONTENT)
-        os.chdir(names.REDUX_DIR)
+        os.chdir("..")
         # reducers
         os.makedirs(names.REDUCERS_DIR, exist_ok=True)
         os.chdir(names.REDUCERS_DIR)
@@ -84,7 +84,7 @@ class SetUpFrontendDir:
             )
         with open(names.FEEDBACK_TOAST_REDUX_FILE, "w") as feedback_toast_reducer_file:
             feedback_toast_reducer_file.write(content.FEEDBACK_TOAST_REDUCER_CONTENT)
-        os.chdir(names.REDUX_DIR)
+        os.chdir("..")
         # store
         with open(names.STORE_TS_FILE, "w") as store_ts_file:
             store_ts_file.write(content.REDUX_STORE_CONTENT)
