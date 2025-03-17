@@ -37,6 +37,22 @@ class SetUpFrontendDir:
             utils_file.write(content.UTILS_FILE_CONTENT)
         print("✅  Helpers folder created successfully")
         os.chdir(self.FRONTEND_DIR)
+    
+    def _setup_redux_dir(self):
+        print("📦 Setting up redux folder ...")
+        os.makedirs(names.REDUX_DIR, exist_ok=True)
+        os.chdir(names.REDUX_DIR)
+        #actions
+        os.makedirs(names.ACTIONS_DIR, exist_ok=True)
+        os.chdir(names.ACTIONS_DIR)
+        with open(names.INDEX_TS_FILE, "w") as index_ts_file:
+            index_ts_file.write(content.ACTIONS_INDEX_TS_CONTENT)
+        with open(names.LOADING_INDICATOR_ACTION_FILE, "w") as loading_indicator_action_file:
+            loading_indicator_action_file.write(content.LOADING_INDICATOR_ACTION_CONTENT)
+        with open(names.FEEDBACK_TOAST_ACTION_FILE, "w") as feedback_toast_action_file:
+            feedback_toast_action_file.write(content.FEEDBACK_TOAST_ACTION_CONTENT)
+        print("✅ Folder redux created successfully")
+        os.chdir(self.FRONTEND_DIR)
 
     def _setup_components_dir(self):
         print("📦 Setting up components folder ...")
