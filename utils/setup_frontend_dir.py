@@ -11,16 +11,31 @@ class SetUpFrontendDir:
 
     def set_up_frontend_dir(self):
         self._setup_frontend_dir()
-    
+
     def _setup_env_dir(self):
         print("📦 Setting up environments folder ...")
         os.makedirs(names.ENVIRONMENTS_DIR, exist_ok=True)
         os.chdir(names.ENVIRONMENTS_DIR)
         with open(names.DEV_ENV_FILE, "w") as dev_env_file:
             dev_env_file.write(content.DEV_ENV_CONTENT)
-        with open(names.DEV_PROD_FILE, "w") as dev_prod_file:
-            dev_prod_file.write(content.DEV_PROD_CONTENT)
+        with open(names.DEV_PROD_FILE, "w") as prod_env_file:
+            prod_env_file.write(content.DEV_PROD_CONTENT)
         print("✅ Folder environments created successfully")
+        os.chdir(self.FRONTEND_DIR)
+
+    def _setup_helpers_dir(self):
+        print("📦 Setting up helpers folder ...")
+        os.makedirs(names.HELPERS_DIR, exist_ok=True)
+        os.chdir(names.HELPERS_DIR)
+        os.makedirs(names.INTERFACES_DIR, exist_ok=True)
+        os.chdir(names.INTERFACES_DIR)
+        with open(names.INDEX_TS_FILE, "w") as index_ts_file:
+            index_ts_file.write(content.INTERFACES_FILE_CONTENT)
+        os.chdir(names.HELPERS_DIR)
+        os.makedirs(names.UTILS_DIR, exist_ok=True)
+        with open(names.INDEX_TS_FILE, "w") as utils_file:
+            utils_file.write(content.UTILS_FILE_CONTENT)
+        print("✅  Helpers folder created successfully")
         os.chdir(self.FRONTEND_DIR)
 
     def _setup_components_dir(self):
