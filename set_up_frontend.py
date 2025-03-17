@@ -12,7 +12,7 @@ class SetUpFrontend:
         pass 
 
     def set_up_frontend_project(self):
-        root_dir = SetUpRootDir()
+        root_dir = SetUpRootDir(self.PROJECT_ROOT)
         root_dir.set_up_root_dir()
 
 frontend = SetUpFrontend()

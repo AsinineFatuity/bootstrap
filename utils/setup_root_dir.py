@@ -5,8 +5,8 @@ import content
 
 class SetUpRootDir:
 
-    def __init__(self):
-        self.PROJECT_ROOT = os.getcwd()
+    def __init__(self, project_root:str):
+        self.PROJECT_ROOT = project_root
     
     def set_up_root_dir(self):
         self._setup_package_json_file()
@@ -19,6 +19,8 @@ class SetUpRootDir:
         with open(names.PACKAGE_JSON_FILE, "w") as package_json_file:
             package_json_file.write(content.PACKAGE_JSON_CONTENT)
         print("✅ package.json file created successfully")
+        print("📦 Updating dependencies ...")
+        subprocess.run(["npx", "npm-check-updates", "-u"])
         print("📦 Installing dependencies ...")
         subprocess.run(["npm", "install"])
         print("✅ Dependencies installed successfully")

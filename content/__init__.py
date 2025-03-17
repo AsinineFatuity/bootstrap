@@ -1,5 +1,6 @@
-from .package_json import PACKAGE_JSON_CONTENT
-from .webpack_common import WEBPACK_COMMON_CONTENT
-from .webpack_dev import WEBPACK_DEV_CONTENT
-from .webpack_prod import WEBPACK_PROD_CONTENT
-from .html import INDEX_HTML_CONTENT, HOME_HTML_CONTENT
+from content.package_json import PACKAGE_JSON_CONTENT
+from content.webpack_common import WEBPACK_COMMON_CONTENT
+from content.webpack_dev import WEBPACK_DEV_CONTENT
+from content.webpack_prod import WEBPACK_PROD_CONTENT
+from content.html import INDEX_HTML_CONTENT, HOME_HTML_CONTENT
+from content.src_dir import INDEX_TSX_CONTENT, APP_TSX_CONTENT
