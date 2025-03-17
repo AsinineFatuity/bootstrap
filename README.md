@@ -1,4 +1,6 @@
 # Hybrid Django-React Bootstrap
+![image](https://github.com/user-attachments/assets/254d65ce-ba5c-41c4-832a-2a0a7f312556)
+
 Script to bootstrap hybrid django-react projects set up inspired by 
 * The hybrid Python/Django/React Architecture as described by Cory Zue in [this article](https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/integrating-javascript-pipeline/)
 * Session based Auth for SPA/Django as described by Nik Tomazic in [this article](https://testdriven.io/blog/django-spa-auth/)
