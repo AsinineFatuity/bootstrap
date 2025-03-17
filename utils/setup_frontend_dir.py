@@ -13,13 +13,13 @@ class SetUpFrontendDir:
         print("📦 Creating frontend folder and initializing files ...")
         os.makedirs(self.FRONTEND_DIR, exist_ok=True)
         os.chdir(self.FRONTEND_DIR)
-        print("✅ Folder frontend created successfully")
         self._setup_env_dir()
         self._setup_helpers_dir()
         self._setup_hooks_dir()
         self._setup_redux_dir()
         self._setup_components_dir()
         self._setup_src_dir()
+        print("✅ Folder frontend set up successfully")
 
     def _setup_env_dir(self):
         print("📦 Setting up environments folder ...")
@@ -64,8 +64,10 @@ class SetUpFrontendDir:
             )
         with open(names.FEEDBACK_TOAST_REDUX_FILE, "w") as feedback_toast_action_file:
             feedback_toast_action_file.write(content.FEEDBACK_TOAST_ACTION_CONTENT)
-        # middleware
+        with open(names.ACTION_TYPES_TS_FILE, "w") as action_types_file:
+            action_types_file.write(content.ACTION_TYPES_CONTENT)
         os.chdir("..")
+        # middleware
         os.makedirs(names.MIDDLEWARE_DIR, exist_ok=True)
         os.chdir(names.MIDDLEWARE_DIR)
         with open(names.INDEX_TS_FILE, "w") as index_ts_file:

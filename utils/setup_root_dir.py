@@ -11,6 +11,7 @@ class SetUpRootDir:
 
     def set_up_root_dir(self):
         self._setup_package_json_file()
+        self._setup_tsconfig_file()
         self._setup_webpack_config_files()
         self._setup_templates_folder()
         self._set_up_static_folder()
@@ -62,4 +63,11 @@ class SetUpRootDir:
         with open(names.INDEX_BUNDLE_JS_FILE, "w") as index_bundle_js_file:
             index_bundle_js_file.write("")
         print("✅ Static folder created successfully")
+        os.chdir(self.PROJECT_ROOT)
+
+    def _setup_tsconfig_file(self):
+        print("📦 Setting up tsconfig.json file ...")
+        with open(names.TS_CONFIG_FILE, "w") as ts_config_file:
+            ts_config_file.write(content.TS_CONFIG_JSON_CONTENT)
+        print("✅ tsconfig.json file created successfully")
         os.chdir(self.PROJECT_ROOT)

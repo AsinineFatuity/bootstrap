@@ -18,7 +18,7 @@ export interface FeedBackToastType {
 """
 
 UTILS_FILE_CONTENT = """
-import { MiddlewareActionType } from "../interfaces";
+import { MiddlewareActionType } from "./interfaces";
 export const createMiddlewareAction = (
   type: string,
   payload: object = {},
