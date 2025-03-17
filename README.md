@@ -5,7 +5,7 @@ Script to bootstrap hybrid django-react projects set up inspired by
 * The benefits of this set up is that you're able to use django features where you want and selectively use React. Also you don't have to worry about JWT as we're using normal django authentication.
 ## Quick Overview
 1. React/Redux/Typescript (Javascript not supported)
-2. Webpack is used for the compiler
+2. Webpack and Babel are used for the compiling
 3. React Bootstrap for styling (Tailwind CSS coming soon)
 4. Quite opinionated but loosely coupled. The contents matter, structure doesn't
 ## Run The Script
