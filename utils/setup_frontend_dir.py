@@ -11,6 +11,17 @@ class SetUpFrontendDir:
 
     def set_up_frontend_dir(self):
         self._setup_frontend_dir()
+    
+    def _setup_env_dir(self):
+        print("📦 Setting up environments folder ...")
+        os.makedirs(names.ENVIRONMENTS_DIR, exist_ok=True)
+        os.chdir(names.ENVIRONMENTS_DIR)
+        with open(names.DEV_ENV_FILE, "w") as dev_env_file:
+            dev_env_file.write(content.DEV_ENV_CONTENT)
+        with open(names.DEV_PROD_FILE, "w") as dev_prod_file:
+            dev_prod_file.write(content.DEV_PROD_CONTENT)
+        print("✅ Folder environments created successfully")
+        os.chdir(self.FRONTEND_DIR)
 
     def _setup_components_dir(self):
         print("📦 Setting up components folder ...")
