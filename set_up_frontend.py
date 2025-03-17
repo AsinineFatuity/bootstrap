@@ -1,22 +1,18 @@
 import os
-import subprocess
 from constants import names
-import content
-from utils import SetUpRootDir
+from utils import SetUpRootDir, SetUpFrontendDir
 
 
 class SetUpFrontend:
-    PROJECT_ROOT = os.getcwd()
-    FRONTEND_DIR = os.path.join(os.getcwd(), names.FRONTEND_DIR)
-    FRONTEND_DIR = os.path.join(PROJECT_ROOT, names.FRONTEND_DIR)
 
     def __init__(self):
-        """Nothing to do here for now"""
-        pass
+        self.project_root = os.getcwd()
 
     def set_up_frontend_project(self):
-        root_dir = SetUpRootDir(self.PROJECT_ROOT)
+        root_dir = SetUpRootDir(self.project_root)
         root_dir.set_up_root_dir()
+        frontend_dir = SetUpFrontendDir(self.project_root)
+        frontend_dir.set_up_frontend_dir()
 
 
 frontend = SetUpFrontend()

@@ -10,7 +10,16 @@ class SetUpFrontendDir:
         self.FRONTEND_DIR = os.path.join(project_root, names.FRONTEND_DIR)
 
     def set_up_frontend_dir(self):
-        self._setup_frontend_dir()
+        print("📦 Creating frontend folder and initializing files ...")
+        os.makedirs(self.FRONTEND_DIR, exist_ok=True)
+        os.chdir(self.FRONTEND_DIR)
+        print("✅ Folder frontend created successfully")
+        self._setup_env_dir()
+        self._setup_helpers_dir()
+        self._setup_hooks_dir()
+        self._setup_redux_dir()
+        self._setup_components_dir()
+        self._setup_src_dir()
 
     def _setup_env_dir(self):
         print("📦 Setting up environments folder ...")
@@ -118,9 +127,3 @@ class SetUpFrontendDir:
             home_tsx_file.write(content.HOME_PAGE_CONTENT)
         print("✅ Folder src created successfully")
         os.chdir(self.FRONTEND_DIR)
-
-    def _setup_frontend_dir(self):
-        print("📦 Creating frontend folder and initializing React ...")
-        os.makedirs(self.FRONTEND_DIR, exist_ok=True)
-        os.chdir(self.FRONTEND_DIR)
-        print("✅ Folder frontend created successfully")
