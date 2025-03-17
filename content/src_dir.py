@@ -56,7 +56,7 @@ const Home = () => {
   useEffect(() => {
     dispatch(
       showCustomFeedbackToast(
-        "Welcome to my awesome app",
+        "Welcome to my hybrid Django-React project",
         "info",
       ),
     );

@@ -9,8 +9,8 @@ from django.conf import settings
 
 class HomeView(TemplateView):
     env_template_dict = {
-        settings.DEBUG: "api/home.html",
-        not settings.DEBUG: "api/index.html",
+        settings.DEBUG: "home.html",
+        not settings.DEBUG: "index.html",
     }
     template_name = env_template_dict[settings.DEBUG]
     context = {}

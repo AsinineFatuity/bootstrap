@@ -8,16 +8,37 @@ Scripts to bootstrap my hybrid django-react projects set up inspired by
 3. Ensure you have installed node and npm
 4. Run the script `python3 set_up_frontend.py`
 5. This will configure webpack, redux and the react app and install all dependecies
-6. Add this to your 
+6. Add this to your django project settings file
    ```python
    #TEMPLATES["DIRS"] list in project/settings.py
+   import os # top of file
    os.path.join(BASE_DIR, "templates")
    #static files section
    STATIC_ROOT = os.path.join(BASE_DIR.parent, "static")
-    STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, "static"),
-    ]
+   STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+   ]
    ```
-7. Run `npm start` and `./manage.py runserver` in separate terminal windows
-8. Navigate to `http://127.0.0.1:8000` and you will see the react home page loaded
-9.  Build on from there
+7. Add the following to your `.gitignore file`
+```bash
+node_modules/
+dist/ 
+
+# Ignore hot-update files and build output
+static/hot/
+static/index-bundle.js
+static/index-bundle.js.map
+static/main.css
+static/main.css.map
+static/index.html
+static/index-bundle.js.LICENSE.txt
+static/output.css
+
+# Ignore the frontend environments
+frontend/environments/.env.development
+frontend/environments/.env.production
+```
+8. Run `npm start` and `./manage.py runserver` in separate terminal windows
+9.  Navigate to `http://127.0.0.1:8000` and you will see the react home page loaded
+10. Try changing contents in `frontend/src/pages/home.tsx` to see live reload in action
+11. Build on from there
