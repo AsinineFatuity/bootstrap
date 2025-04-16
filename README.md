@@ -26,7 +26,15 @@ Script to bootstrap hybrid django-react projects set up inspired by
    STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
    ]
+   #Allow Session Auth For React SPA
+   CSRF_COOKIE_SAMESITE = "Lax"
+   SESSION_COOKIE_SAMESITE = "Lax"
+   CSRF_COOKIE_HTTPONLY = False  # False since we will grab it via universal-cookies
+   SESSION_COOKIE_HTTPONLY = True
+
+   SESSION_COOKIE_AGE = 60 * 60 * 24 * 7  # 1 week
    ```
+
 7. Add the following to your `.gitignore file`
 ```bash
 node_modules/
