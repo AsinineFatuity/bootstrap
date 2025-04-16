@@ -46,6 +46,7 @@ static/output.css
 frontend/environments/.env.development
 frontend/environments/.env.production
 ```
+8. Run `npm install` to install the dependencies. You can also use `pnpm`
 8. Run `npm start` and `./manage.py runserver` in separate terminal windows
 9.  Navigate to `http://127.0.0.1:8000` and you will see the react home page loaded
 10. Try changing contents in `frontend/src/pages/home.tsx` to see live reload in action

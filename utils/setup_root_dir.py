@@ -23,9 +23,7 @@ class SetUpRootDir:
         print("✅ package.json file created successfully")
         print("📦 Updating dependencies ...")
         subprocess.run(["npx", "npm-check-updates", "-u"])
-        print("📦 Installing dependencies ...")
-        subprocess.run(["npm", "install"])
-        print("✅ Dependencies installed successfully")
+        print("✅ Dependencies upgraded successfully")
 
     def _setup_webpack_config_files(self):
         print("📦 Setting up webpack configuration files ...")
