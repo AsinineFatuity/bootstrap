@@ -1,7 +1,5 @@
 REDUX_STORE_CONTENT = """
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import { thunk } from "redux-thunk";
-
 import { sliceReducers } from "./reducer";
 export const rootReducer = combineReducers(sliceReducers);
 
@@ -11,7 +9,7 @@ const reduxStore = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: false,
-    }).concat(thunk),
+    }),
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
