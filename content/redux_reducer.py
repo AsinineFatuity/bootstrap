@@ -1,6 +1,6 @@
 FEEDBACK_TOAST_REDUCER_CONTENT = """
 import { FEEDBACK_TOAST } from "../actions/types";
-import { FeedBackToastType } from "../../helpers/interfaces";
+import { FeedBackToastType } from "./src/helpers/interfaces";
 
 const initialState: FeedBackToastType = {
   type: "default",

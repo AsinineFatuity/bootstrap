@@ -2,7 +2,7 @@ APP_TSX_CONTENT = """
 import React from "react";
 import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
 import Home from "./src/pages/home";
-import { APP_URLS } from "./helpers";
+import { APP_URLS } from "./src/helpers";
 
 function App() {
   return (
@@ -26,8 +26,8 @@ import { ToastContainer } from "react-toastify";
 import "bootstrap/dist/css/bootstrap.min.css"; // don't change order
 import "react-toastify/dist/ReactToastify.css";
 import App from "./App";
-import { LoadingIndicator, FeedbackToast } from "./components";
-import reduxStore from "./redux/store";
+import { LoadingIndicator, FeedbackToast } from "./src/components";
+import reduxStore from "./src/redux/store";
 
 const rootElement = document.getElementById("root");
 
@@ -48,8 +48,8 @@ if (rootElement) {
 HOME_PAGE_CONTENT = """
 import React, { useEffect } from "react";
 import { Container, Button } from "react-bootstrap";
-import { showCustomFeedbackToast, showLoadingIndicator } from "../../redux/actions";
-import { useAppDispatch } from "../../hooks";
+import { showCustomFeedbackToast, showLoadingIndicator } from "../redux/actions";
+import { useAppDispatch } from "../hooks";
 const Home = () => {
   const dispatch = useAppDispatch();
 

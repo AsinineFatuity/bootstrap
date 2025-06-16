@@ -14,7 +14,7 @@ const commonResolve = {
         "@": path.resolve(__dirname, "src"),
         images: path.resolve(__dirname, "../frontend/src/images"),
     },
-    extensions: ["*", ".js", ".jsx", ".ts", ".tsx"],
+    extensions: [".*", ".js", ".jsx", ".ts", ".tsx"],
 };
 
 const commonRules = [

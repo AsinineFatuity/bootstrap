@@ -18,11 +18,11 @@ class SetUpFrontendDir:
         with open(names.APP_TSX_FILE, "w") as app_tsx_file:
             app_tsx_file.write(content.APP_TSX_CONTENT)
         self._setup_env_dir()
+        self._setup_src_dir()
         self._setup_helpers_dir()
         self._setup_hooks_dir()
         self._setup_redux_dir()
         self._setup_components_dir()
-        self._setup_src_dir()
         print("✅ Folder frontend set up successfully")
         os.chdir(self.PROJECT_ROOT)
 
@@ -50,7 +50,7 @@ class SetUpFrontendDir:
         with open(names.INDEX_TS_FILE, "w") as utils_file:
             utils_file.write(content.UTILS_FILE_CONTENT)
         print("✅  Helpers folder created successfully")
-        os.chdir(self.FRONTEND_DIR)
+        os.chdir("..")
 
     def _setup_redux_dir(self):
         print("📦 Setting up redux folder ...")
@@ -96,7 +96,7 @@ class SetUpFrontendDir:
         with open(names.STORE_TS_FILE, "w") as store_ts_file:
             store_ts_file.write(content.REDUX_STORE_CONTENT)
         print("✅ Folder redux created successfully")
-        os.chdir(self.FRONTEND_DIR)
+        os.chdir("..")
 
     def _setup_hooks_dir(self):
         print("📦 Setting up hooks folder ...")
@@ -105,7 +105,7 @@ class SetUpFrontendDir:
         with open(names.INDEX_TS_FILE, "w") as index_ts_file:
             index_ts_file.write(content.HOOKS_INDEX_TS_CONTENT)
         print("✅ Folder hooks created successfully")
-        os.chdir(self.FRONTEND_DIR)
+        os.chdir("..")
 
     def _setup_components_dir(self):
         print("📦 Setting up components folder ...")
@@ -118,7 +118,7 @@ class SetUpFrontendDir:
         with open(names.FEEDBACK_TOAST_TSX_FILE, "w") as feedback_toast_tsx_file:
             feedback_toast_tsx_file.write(content.FEEDBACK_TOAST_TSX_CONTENT)
         print("✅ Folder components created successfully")
-        os.chdir(self.FRONTEND_DIR)
+        os.chdir("..")
 
     def _setup_src_dir(self):
         print("📦 Setting up src folder ...")
@@ -129,4 +129,4 @@ class SetUpFrontendDir:
         with open(names.HOME_TSX_FILE, "w") as home_tsx_file:
             home_tsx_file.write(content.HOME_PAGE_CONTENT)
         print("✅ Folder src created successfully")
-        os.chdir(self.FRONTEND_DIR)
+        os.chdir("..")
