@@ -10,6 +10,10 @@ const commonOutput = {
 };
 
 const commonResolve = {
+    alias: {
+        "@": path.resolve(__dirname, "src"),
+        images: path.resolve(__dirname, "../frontend/src/images"),
+    },
     extensions: ["*", ".js", ".jsx", ".ts", ".tsx"],
 };
 
